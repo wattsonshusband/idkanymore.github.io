@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>For Ivy</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body class="parent">
+    <h1 class="center">You are</h1>
+
+    <h1 class="mid"><span class="span-border highlighted" id="swap-text">Pretty</span></h1>
+    <p class="bottom yourmom">Would you like e-smash on ape sex leg ends?</p>
+
+    <div class="footer2">
+      <button class="btn" id="yesbtn">
+        Yes
+      </button>
+      <button class="btn" id="nobtn">
+        No
+      </button>
+    </div>
+
+    <script>
+      const listOfTexts = ['Beautiful', 'Cute', 'Silly', 'Bad At Apex', 'Worst Loba Player', 'So Cunt', 'Pretty'];
+
+      var idx = 0;
+      let spanElement = $('#swap-text');
+      setInterval(() => {
+        spanElement.fadeOut(600);
+        if(idx >= listOfTexts.length){ idx = 0; }
+        setTimeout(() => {
+          spanElement.text(listOfTexts[idx]);
+          spanElement.fadeIn(600);
+          idx++;
+        }, 605);
+      }, 3600);
+
+
+      let yesBtn = $('#yesbtn');
+      let noBtn = $('#nobtn');
+      yesBtn.on('click', () => { window.location.href = "./thankyou/index.html" })
+      noBtn.on('click', () => { window.location.href = "./no/index.html" })
+    </script>
+  </body>
+</html>
